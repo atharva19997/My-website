@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    <div><h3>ATHARVA ANIL KULKARNI</h3></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/FS.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/FSlogo.png" alt="Formula Student">
+                        </div>
+                        <div class="subtitle">
+                            Worked for 3 years in a Formula Student Team, going from calculations to FMECA to testing of the vehicle. Team has attended various events in India, Germany, Austria and Hungary.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Solidworks.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/Solidworkslogo.png" alt="Solidworks">
+                        </div>
+                        <div class="subtitle">
+                            Designed and analysed many parts of car like chassis, brake caliper, car's nose, etc in Solidworks and CATIA. Assembled the whole car and did all draftings.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Rendering.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/Renderinglogo.png" alt="Rendering">
+                        </div>
+                        <div class="subtitle">
+                            Rendered the car and various sub-assemblies for design, business and cost presentation and various covers for website and sponsorship events.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/SCC.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/SCClogo.png" alt="Sea Cadet">
+                        </div>
+                        <div class="subtitle">
+                            Attended the Sea Cadet Corps from 6th to 10th Std. in Pune in BEG and Centre at Khadki. Did various pulling activities and camps. Marched at Gateway of India.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Python.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/Pythonlogo.png" alt="Programming Languages">
+                        </div>
+                        <div class="subtitle">
+                            Knowlegde of basics of languages such as Python and Java. Also know a nibble of HTML, C++ and Machine Learning.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Hacking.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/Hackinglogo.png" alt="Ethical Hacking">
+                        </div>
+                        <div class="subtitle">
+                            Did a course in Practical Ethical Hacking for self security and got Interested in it. Still learning new things everyday.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<!-- js code is bottom of code-->
+<!-- we need to grab all portfolio items from page-->
+<!-- to do that, go in chrome and in console, say $('.portfolio-item-wrapper') which pulls 1 item which shows it runs js syntax-->
+<!-- next say const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')-->
+<!-- then call var portfolioItems and it shows all items-->
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () =>{
+           portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () =>{
+           portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+<!--portfolioItem is iterative var-->
+</html>
+<!-- unsplash.com for free images or freepik-->
